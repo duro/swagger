@@ -219,7 +219,6 @@ const mapParametersTypes = parameters => parameters.map(param => {
         return omitParamType(param);
     }
     const { type } = param;
-    console.log(type);
     const paramWithStringType = lodash_1.pickBy(Object.assign({}, param, { type: type && shared_utils_1.isFunction(type)
             ? exports.mapTypesToSwaggerTypes(type.name)
             : exports.mapTypesToSwaggerTypes(type) }), lodash_1.negate(shared_utils_1.isUndefined));
